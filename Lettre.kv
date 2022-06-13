@@ -3,7 +3,9 @@ MainMenu:
 <MainMenu>:
     cols: 3
     rows: 1
+    # Carreau Expéditeur
     BoxLayout:
+        width: 25%
         orientation: 'vertical'
         Label:
             text:'Expéditeur'
@@ -33,8 +35,22 @@ MainMenu:
         TextInput:
             id: "ville"
             text:'text'
+        Label:
+            text: 'Numéro de téléphone'
+        TextInput:
+            id: "tel"
+            text:'text'
+        Label:
+            text: 'Adresse e-mail'
+        TextInput:
+            id: "mail"
+            text:'text'
+    #Carreau Message 
     BoxLayout:
         orientation: 'vertical'
+        Label:
+            text:'Message'
+            color: 1,0,0
         BoxLayout:
             orientation:'vertical'
             TextInput:
@@ -47,8 +63,12 @@ MainMenu:
                 text:'Valider'
             Button:
                 text:'Générer'
+    #Carreau Destinataire 
     BoxLayout:
         orientation: 'vertical'
+        Label:
+            text:'Destinataire'
+            color: 1,0,0
         Label:
             text: 'Nom'
         TextInput:
