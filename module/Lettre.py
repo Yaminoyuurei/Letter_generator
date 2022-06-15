@@ -5,32 +5,54 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from module.Person import Person
 from docx.shared import Cm
 
-document = Document()
-sections = document.sections
-for section in sections:
-    section.top_margin = Cm(2)
-    section.bottom_margin = Cm(3)
-    section.left_margin = Cm(3)
-    section.right_margin = Cm(3)
 
-obj = ""   
-expediteur = Person("NOM","PRÉNOM","ADRESSE","CP","VILLE")
-destinataire = Person("NOM","PRÉNOM","ADRESSE","CP","VILLE")
+class Letter:
 
-p_expediteur = document.add_paragraph(expediteur.check())   
+    def save_letter(self, expediteur, destinataire, obj, msg):
+        document = Document()
+        sections = document.sections
+        for section in sections:
+            section.top_margin = Cm(3.81)
+            section.bottom_margin = Cm(2)
+            section.left_margin = Cm(2)
+            section.right_margin = Cm(2)
 
-p_destinataire =document.add_paragraph(destinataire.check())
-p_destinataire.alignment= WD_ALIGN_PARAGRAPH.RIGHT
+        p_expediteur = document.add_paragraph(self.check(expediteur))
 
-p_lieu = document.add_paragraph(f"{expediteur.ville}, le {datetime.datetime.now().strftime('%d/%m/%Y')}")
-p_lieu.alignment= WD_ALIGN_PARAGRAPH.RIGHT
+        p_destinataire = document.add_paragraph(f"{self.check(destinataire,True)}\n\n")
+        p_destinataire.paragraph_format.left_indent = Cm(9)
+        # p_destinataire.paragraph_format.space_before = Cm(11)
 
-if obj != "":
-    p_objet = document.add_paragraph(f"Objet : {obj}")
+        p_lieu = document.add_paragraph(
+            f"{expediteur.ville},\nle {datetime.datetime.now().strftime('%d/%m/%Y')}")
+        p_lieu.paragraph_format.left_indent = Cm(9)
 
-p_appel = document.add_paragraph(f"Madame, Monsieur,\n\n")
-p_core = document.add_paragraph("fdgheomudhgfeoghpoejgf fgrgpergperogjerzigùerjg iregskjrjighroighrs orh^qhiurhtoqjheijfqj ffhrlhgrghrghrlg hrlgql \n dfoihdoig hjroigjrpigjrp igj^phijtph rjdfghrthte grgergrge \n rfgrrgerrhgtgdgrtgrgreg \n hrhhtrtrhthdfthth rhdfhthytrh tfdhtrht")
+        if obj != "":
+            p_objet = document.add_paragraph(f"Objet : {obj}")
 
-p_signature = document.add_paragraph(f"{expediteur.prenom} {expediteur.nom}")
-p_signature.alignment= WD_ALIGN_PARAGRAPH.RIGHT
-document.save('test.docx')
+        p_appel = document.add_paragraph(f"Madame, Monsieur,\n\n")
+        msg_split = msg.split("\n")
+        
+        for text in msg_split:
+            document.add_paragraph(text)
+
+        p_signature = document.add_paragraph(
+            f"{expediteur.prenom} {expediteur.nom}")
+        p_signature.paragraph_format.left_indent = Cm(9)
+        try:
+            document.save("letter.docx")
+            return True
+        except:
+            return False
+    
+    def check(self, person,dest=False):
+        text = f"{person.nom} {person.prenom}\n{person.adresse}\n{person.cp} {person.ville}"
+        if dest:
+            return text
+        else:
+            text += f"\nTél : {person.tel}"
+            if person.mail == "":
+                return text
+            else :
+                return text+f"\nMail : {person.mail}"        
+

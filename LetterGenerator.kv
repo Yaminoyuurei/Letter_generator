@@ -1,0 +1,476 @@
+MainMenu:
+
+<MainMenu>:
+    cols:1
+    rows:2
+    TabbedPanel:
+        tab_pos: 'top_mid'
+        do_default_tab: False
+# ---------------------------Expéditeur-TAB-------------------------------------
+        TabbedPanelItem:
+            text: 'Expéditeur'
+            BoxLayout:
+                canvas.before:
+                    Color:
+                        rgb:0.8,0.8,0.8
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                padding: ('10dp', '10dp', '10dp', '10dp')
+                orientation: 'vertical'
+                BoxLayout:
+                    orientation: 'horizontal'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Nom'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            focus: True
+                            id: e_nom
+                            text: str(root.exp.nom)
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Prénom'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            focus: True
+                            id: e_prenom
+                            text: root.exp.prenom
+                Label:
+                    text: 'Adresse'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 90
+                    cols: 3
+                    id: e_adresse
+                    text: root.exp.adresse
+                BoxLayout:
+                    orientation: 'horizontal'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Code Postal'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: e_cp
+                            text: root.exp.cp
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Ville'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: e_ville
+                            text: root.exp.ville
+                BoxLayout:
+                    orientation: 'horizontal'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Numéro de téléphone'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: e_tel
+                            text: root.exp.tel
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Email'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: e_mail
+                            text: root.exp.mail
+# ---------------------------Destinataire-TAB-------------------------------------
+        TabbedPanelItem:
+            text: 'Destinataire'
+            BoxLayout:
+                padding: ('10dp', '10dp', '10dp', '10dp')
+                orientation: 'vertical'
+                canvas.before:
+                    Color:
+                        rgb:0.8,0.8,0.8
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                BoxLayout:
+                    orientation: 'horizontal'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Nom'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: d_nom
+                            text: root.dest.nom
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Prénom'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: d_prenom
+                            text:root.dest.prenom
+                Label:
+                    text: 'Adresse'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 90
+                    cols: 3
+                    id: d_adresse
+                    text: root.dest.adresse
+                BoxLayout:
+                    orientation: 'horizontal'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Code Postal'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: d_cp
+                            text: root.dest.cp
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Label:
+                            size_hint: 1, None
+                            size: 0, 30 
+                            text: 'Ville'
+                            color: 0,0,0
+                        TextInput:
+                            size_hint: 1, None
+                            size: 0, 30
+                            multiline: False
+                            id: d_ville
+                            text: root.dest.ville
+# ---------------------------Référence-TAB---------------------------------------
+        TabbedPanelItem:
+            text: 'Référence'
+            
+# ---------------------------Corps-TAB-------------------------------------------
+        TabbedPanelItem:
+            text: 'Corps'
+            BoxLayout:
+                padding: ('10dp', '10dp', '10dp', '10dp')
+                orientation: 'vertical'
+                canvas.before:
+                    Color:
+                        rgb:0.8,0.8,0.8
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                Label:
+                    size_hint: 1, None
+                    size: 0, 53
+                    text: 'Objet'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: obj
+                    text: ''
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Message'
+                    color: 0,0,0
+                TextInput:
+                    # size_hint: 1 , None
+                    # size: 0 , root.height-200
+                    id: msg
+                    text:''
+                Label:
+                    size_hint: 1, None
+                    size: 0, 53
+                    text: 'Formule de politesse'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: poli
+                    text: ''
+# ---------------------------Action-BAR------------------------------------------
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, None
+        size: 0 , 40
+        Button:
+            size_hint: 1, None
+            size: 0, 40
+            text:'JSON'
+            on_press: root.create_json([[e_nom.text, e_prenom.text, e_adresse.text, e_cp.text, e_ville.text, e_tel.text, e_mail.text],[d_nom.text, d_prenom.text, d_adresse.text, d_cp.text, d_ville.text], [msg.text, obj.text]])
+        Button:
+            size_hint: 1, None
+            size: 0 , 40
+            text:'Réinitialiser'
+            on_press: e_nom.text = ''; e_prenom.text = ''; e_adresse.text = ''; e_cp.text = ''; e_ville.text = ''; e_tel.text = ''; e_mail.text = ''; d_nom.text = ''; d_prenom.text = ''; d_adresse.text = ''; d_cp.text = ''; d_ville.text = ''; msg.text = ''; obj.text = ''
+        Button:
+            size_hint: 1, None
+            size: 0 , 40
+            text:'Générer'
+            on_press: root.create_letter([[e_nom.text, e_prenom.text, e_adresse.text, e_cp.text, e_ville.text, e_tel.text, e_mail.text],[d_nom.text, d_prenom.text, d_adresse.text, d_cp.text, d_ville.text], [msg.text, obj.text]])
+
+
+
+<OldMenu@MainMenu>:
+    cols: 2
+    rows: 1
+    # Carreau Expéditeur
+    BoxLayout:
+        padding: ('10dp', '10dp', '10dp', '10dp')
+        orientation: 'vertical'
+        Label:
+            size_hint: 1, None
+            size: 0 , 20
+            text:'Expéditeur'
+            color: 1,0,0
+        BoxLayout:
+            orientation: 'horizontal'
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Nom'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    focus: True
+                    id: e_nom
+                    text: str(root.exp.nom)
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Prénom'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    focus: True
+                    id: e_prenom
+                    text: root.exp.prenom
+        Label:
+            text: 'Adresse'
+            color: 0,0,0
+        TextInput:
+            size_hint: 1, None
+            size: 0, 90
+            cols: 3
+            id: e_adresse
+            text: root.exp.adresse
+        BoxLayout:
+            orientation: 'horizontal'
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Code Postal'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: e_cp
+                    text: root.exp.cp
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Ville'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: e_ville
+                    text: root.exp.ville
+        BoxLayout:
+            orientation: 'horizontal'
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Numéro de téléphone'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: e_tel
+                    text: root.exp.tel
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Email'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: e_mail
+                    text: root.exp.mail
+        Widget:
+            canvas:
+                Color:
+                    rgb: 0,0,0
+                Line:
+                    points: self.x,self.y, self.width,self.y
+                    width: 1
+        Label:
+            size_hint: 1, None
+            size: 0 , 40
+            text:'Destinataire'
+            color: 1,0,0
+        BoxLayout:
+            orientation: 'horizontal'
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Nom'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: d_nom
+                    text: root.dest.nom
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Prénom'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: d_prenom
+                    text:root.dest.prenom
+        Label:
+            text: 'Adresse'
+            color: 0,0,0
+        TextInput:
+            size_hint: 1, None
+            size: 0, 90
+            cols: 3
+            id: d_adresse
+            text: root.dest.adresse
+        BoxLayout:
+            orientation: 'horizontal'
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Code Postal'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: d_cp
+                    text: root.dest.cp
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    size_hint: 1, None
+                    size: 0, 30 
+                    text: 'Ville'
+                    color: 0,0,0
+                TextInput:
+                    size_hint: 1, None
+                    size: 0, 30
+                    multiline: False
+                    id: d_ville
+                    text: root.dest.ville
+    BoxLayout:
+        padding: ('10dp', '10dp', '10dp', '10dp')
+        orientation: 'vertical'
+        Label:
+            size_hint: 1, None
+            size: 0, 53
+            text: 'Objet'
+            color: 0,0,0
+        TextInput:
+            size_hint: 1, None
+            size: 0, 30
+            multiline: False
+            id: obj
+            text: ''
+        Label:
+            size_hint: 1, None
+            size: 0, 30 
+            text: 'Message'
+            color: 0,0,0
+        TextInput:
+            size_hint: 1 , None
+            size: 0 , root.height-180
+            id: msg
+            text:''
+        GridLayout:
+            cols: 3
+            rows: 1
+            
+        

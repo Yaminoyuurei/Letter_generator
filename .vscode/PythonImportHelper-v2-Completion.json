@@ -1,0 +1,283 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "docx",
+        "description": "docx",
+        "isExtraImport": true,
+        "detail": "docx",
+        "documentation": {}
+    },
+    {
+        "label": "WD_ALIGN_PARAGRAPH",
+        "importPath": "docx.enum.text",
+        "description": "docx.enum.text",
+        "isExtraImport": true,
+        "detail": "docx.enum.text",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "importPath": "module.Person",
+        "description": "module.Person",
+        "isExtraImport": true,
+        "detail": "module.Person",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "importPath": "module.Person",
+        "description": "module.Person",
+        "isExtraImport": true,
+        "detail": "module.Person",
+        "documentation": {}
+    },
+    {
+        "label": "Cm",
+        "importPath": "docx.shared",
+        "description": "docx.shared",
+        "isExtraImport": true,
+        "detail": "docx.shared",
+        "documentation": {}
+    },
+    {
+        "label": "NumericProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "Clock",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "StringProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "StringProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectProperty",
+        "importPath": "kivy.properties",
+        "description": "kivy.properties",
+        "isExtraImport": true,
+        "detail": "kivy.properties",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "kivy.config",
+        "description": "kivy.config",
+        "isExtraImport": true,
+        "detail": "kivy.config",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "Letter",
+        "importPath": "module.Lettre",
+        "description": "module.Lettre",
+        "isExtraImport": true,
+        "detail": "module.Lettre",
+        "documentation": {}
+    },
+    {
+        "label": "Window",
+        "importPath": "kivy.core.window",
+        "description": "kivy.core.window",
+        "isExtraImport": true,
+        "detail": "kivy.core.window",
+        "documentation": {}
+    },
+    {
+        "label": "App",
+        "importPath": "kivy.app",
+        "description": "kivy.app",
+        "isExtraImport": true,
+        "detail": "kivy.app",
+        "documentation": {}
+    },
+    {
+        "label": "Widget",
+        "importPath": "kivy.uix.widget",
+        "description": "kivy.uix.widget",
+        "isExtraImport": true,
+        "detail": "kivy.uix.widget",
+        "documentation": {}
+    },
+    {
+        "label": "GridLayout",
+        "importPath": "kivy.uix.gridlayout",
+        "description": "kivy.uix.gridlayout",
+        "isExtraImport": true,
+        "detail": "kivy.uix.gridlayout",
+        "documentation": {}
+    },
+    {
+        "label": "TextInput",
+        "importPath": "kivy.uix.textinput",
+        "description": "kivy.uix.textinput",
+        "isExtraImport": true,
+        "detail": "kivy.uix.textinput",
+        "documentation": {}
+    },
+    {
+        "label": "Popup",
+        "importPath": "kivy.uix.popup",
+        "description": "kivy.uix.popup",
+        "isExtraImport": true,
+        "detail": "kivy.uix.popup",
+        "documentation": {}
+    },
+    {
+        "label": "Label",
+        "importPath": "kivy.uix.label",
+        "description": "kivy.uix.label",
+        "isExtraImport": true,
+        "detail": "kivy.uix.label",
+        "documentation": {}
+    },
+    {
+        "label": "Clock",
+        "importPath": "kivy.clock",
+        "description": "kivy.clock",
+        "isExtraImport": true,
+        "detail": "kivy.clock",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "kivy.uix.button",
+        "description": "kivy.uix.button",
+        "isExtraImport": true,
+        "detail": "kivy.uix.button",
+        "documentation": {}
+    },
+    {
+        "label": "BoxLayout",
+        "importPath": "kivy.uix.boxlayout",
+        "description": "kivy.uix.boxlayout",
+        "isExtraImport": true,
+        "detail": "kivy.uix.boxlayout",
+        "documentation": {}
+    },
+    {
+        "label": "TabbedPanel",
+        "importPath": "kivy.uix.tabbedpanel",
+        "description": "kivy.uix.tabbedpanel",
+        "isExtraImport": true,
+        "detail": "kivy.uix.tabbedpanel",
+        "documentation": {}
+    },
+    {
+        "label": "Letter",
+        "kind": 6,
+        "importPath": "module.Lettre",
+        "description": "module.Lettre",
+        "peekOfCode": "class Letter:\n    def save_letter(self, expediteur, destinataire, obj, msg):\n        document = Document()\n        sections = document.sections\n        for section in sections:\n            section.top_margin = Cm(3.81)\n            section.bottom_margin = Cm(2)\n            section.left_margin = Cm(2)\n            section.right_margin = Cm(2)\n        p_expediteur = document.add_paragraph(self.check(expediteur))",
+        "detail": "module.Lettre",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "kind": 6,
+        "importPath": "module.Person",
+        "description": "module.Person",
+        "peekOfCode": "class Person:\n    def __init__(self,nom=\"\",prenom=\"\",adresse=\"\",cp=\"\",ville=\"\",tel = \"\", mail = \"\"):\n        self.nom = nom\n        self.prenom = prenom\n        self.adresse = adresse\n        self.cp = cp\n        self.ville = ville\n        self.tel = tel\n        self.mail = mail",
+        "detail": "module.Person",
+        "documentation": {}
+    },
+    {
+        "label": "MainMenu",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MainMenu(GridLayout):\n    def __init__(self,**kwargs,):\n        self.dest = Person()\n        self.letter = Letter()\n        if os.path.isfile(\"data.json\"):\n            f = open('data.json', 'r')\n            data_json = f.read()\n            data = json.loads(data_json) \n            f.close()     \n            self.exp = Person(data['nom'],data['prenom'],data['adresse'],data['cp'],data['ville'],data['tel'],data['mail'])    ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "OldMenu",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class OldMenu(GridLayout):\n    pass\nclass LetterGenerator(App):\n    manager = ObjectProperty(None)\n    def build(self):\n        self.manager = MainMenu()\n        return self.manager\nLetterGenerator().run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "LetterGenerator",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class LetterGenerator(App):\n    manager = ObjectProperty(None)\n    def build(self):\n        self.manager = MainMenu()\n        return self.manager\nLetterGenerator().run()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Window.clearcolor",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "Window.clearcolor = (0, 0, 0, 1) \nConfig.set('graphics', 'width', '800')\nConfig.set('graphics', 'height', '600')\n# Config.set('graphics','resizable',0)\nclass MainMenu(GridLayout):\n    def __init__(self,**kwargs,):\n        self.dest = Person()\n        self.letter = Letter()\n        if os.path.isfile(\"data.json\"):\n            f = open('data.json', 'r')",
+        "detail": "main",
+        "documentation": {}
+    }
+]
