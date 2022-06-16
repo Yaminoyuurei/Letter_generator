@@ -42,7 +42,7 @@ class MainMenu(GridLayout):
         self.obj = ""
         self.msg = ""
         
-    def associate(self,input,json=False):
+    def associate(self,input):
         # Mise à jour de l'expéditeur
         self.exp.nom = input[0][0]
         self.exp.prenom = input[0][1]
