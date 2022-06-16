@@ -40,7 +40,8 @@ class Letter:
             f"{expediteur.prenom} {expediteur.nom}")
         p_signature.paragraph_format.left_indent = Cm(9)
         try:
-            document.save("letter.docx")
+            name = f"{datetime.datetime.now().strftime('%Y%m%d')}-{destinataire.nom}{destinataire.prenom}"
+            document.save(f"{name}.docx")
             return True
         except:
             return False

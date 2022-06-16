@@ -6,7 +6,7 @@ MainMenu:
     TabbedPanel:
         tab_pos: 'top_mid'
         do_default_tab: False
-# ---------------------------Expéditeur-TAB-------------------------------------
+# ---------------------------expediteur-TAB-------------------------------------
         TabbedPanelItem:
             text: 'Expéditeur'
             BoxLayout:
@@ -33,7 +33,7 @@ MainMenu:
                             multiline: False
                             focus: True
                             id: e_nom
-                            text: str(root.exp.nom)
+                            text: str(root.expediteur.nom)
                     BoxLayout:
                         orientation: 'vertical'
                         Label:
@@ -47,7 +47,7 @@ MainMenu:
                             multiline: False
                             focus: True
                             id: e_prenom
-                            text: root.exp.prenom
+                            text: root.expediteur.prenom
                 Label:
                     text: 'Adresse'
                     color: 0,0,0
@@ -56,7 +56,7 @@ MainMenu:
                     size: 0, 90
                     cols: 3
                     id: e_adresse
-                    text: root.exp.adresse
+                    text: root.expediteur.adresse
                 BoxLayout:
                     orientation: 'horizontal'
                     BoxLayout:
@@ -71,7 +71,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: e_cp
-                            text: root.exp.cp
+                            text: root.expediteur.cp
                     BoxLayout:
                         orientation: 'vertical'
                         Label:
@@ -84,7 +84,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: e_ville
-                            text: root.exp.ville
+                            text: root.expediteur.ville
                 BoxLayout:
                     orientation: 'horizontal'
                     BoxLayout:
@@ -99,7 +99,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: e_tel
-                            text: root.exp.tel
+                            text: root.expediteur.tel
                     BoxLayout:
                         orientation: 'vertical'
                         Label:
@@ -112,7 +112,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: e_mail
-                            text: root.exp.mail
+                            text: root.expediteur.mail
 # ---------------------------Destinataire-TAB-------------------------------------
         TabbedPanelItem:
             text: 'Destinataire'
@@ -139,7 +139,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: d_nom
-                            text: root.dest.nom
+                            text: root.destinataire.nom
                     BoxLayout:
                         orientation: 'vertical'
                         Label:
@@ -152,7 +152,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: d_prenom
-                            text:root.dest.prenom
+                            text:root.destinataire.prenom
                 Label:
                     text: 'Adresse'
                     color: 0,0,0
@@ -161,7 +161,7 @@ MainMenu:
                     size: 0, 90
                     cols: 3
                     id: d_adresse
-                    text: root.dest.adresse
+                    text: root.destinataire.adresse
                 BoxLayout:
                     orientation: 'horizontal'
                     BoxLayout:
@@ -176,7 +176,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: d_cp
-                            text: root.dest.cp
+                            text: root.destinataire.cp
                     BoxLayout:
                         orientation: 'vertical'
                         Label:
@@ -189,7 +189,7 @@ MainMenu:
                             size: 0, 30
                             multiline: False
                             id: d_ville
-                            text: root.dest.ville
+                            text: root.destinataire.ville
 # ---------------------------Référence-TAB---------------------------------------
         TabbedPanelItem:
             disabled: not pro_mode.active
@@ -216,7 +216,7 @@ MainMenu:
                     size_hint: 1, None
                     size: 0, 30
                     multiline: False
-                    id: obj
+                    id: m_obj
                     text: ''
                 Label:
                     size_hint: 1, None
@@ -235,11 +235,6 @@ MainMenu:
         size: 0 , 40
         Button:
             size_hint: 1, None
-            size: 0, 40
-            text:'JSON'
-            on_press: root.create_json([[e_nom.text, e_prenom.text, e_adresse.text, e_cp.text, e_ville.text, e_tel.text, e_mail.text],[d_nom.text, d_prenom.text, d_adresse.text, d_cp.text, d_ville.text], [msg.text, obj.text]])
-        Button:
-            size_hint: 1, None
             size: 0 , 40
             text:'Réinitialiser'
             on_press: e_nom.text = ''; e_prenom.text = ''; e_adresse.text = ''; e_cp.text = ''; e_ville.text = ''; e_tel.text = ''; e_mail.text = ''; d_nom.text = ''; d_prenom.text = ''; d_adresse.text = ''; d_cp.text = ''; d_ville.text = ''; msg.text = ''; obj.text = ''
@@ -247,7 +242,7 @@ MainMenu:
             size_hint: 1, None
             size: 0 , 40
             text:'Générer'
-            on_press: root.create_letter([[e_nom.text, e_prenom.text, e_adresse.text, e_cp.text, e_ville.text, e_tel.text, e_mail.text],[d_nom.text, d_prenom.text, d_adresse.text, d_cp.text, d_ville.text], [msg.text, obj.text]])
+            on_press: root.create_letter()
         Label:
             text: 'Mode Pro'
             align: 'right'

@@ -24,64 +24,74 @@ Config.set('graphics', 'height', '600')
 class MainMenu(GridLayout):
     
     def __init__(self,**kwargs,):
-        self.dest = Person()
+        self.destinataire = Person()
         self.letter = Letter()
-        if os.path.isfile("data.json"):
-            f = open('data.json', 'r')
+        if os.path.isfile("data/settings.json"):
+            f = open('data/settings.json', 'r')
             data_json = f.read()
             data = json.loads(data_json) 
+            data_e = data.get('expediteur')
             f.close()     
-            self.exp = Person(data['nom'],data['prenom'],data['adresse'],data['cp'],data['ville'],data['tel'],data['mail'])    
+            self.expediteur = Person(data_e['nom'],
+                                     data_e['prenom'],
+                                     data_e['adresse'],
+                                     data_e['cp'],
+                                     data_e['ville'],
+                                     data_e['tel'],
+                                     data_e['mail'])    
         else:
-            self.exp = Person()
+            self.expediteur = Person()
         super().__init__(**kwargs)
     
     def reinit(self):
-        self.exp = Person()
-        self.dest = Person()
+        self.expediteur = Person()
+        self.destinataire = Person()
         self.obj = ""
         self.msg = ""
-        
-    def associate(self,input):
+    
+    def test(self):
+        print(self.ids.e_nom.text)   
+    
+    def associate(self):
         # Mise à jour de l'expéditeur
-        self.exp.nom = input[0][0]
-        self.exp.prenom = input[0][1]
-        self.exp.adresse = input[0][2]
-        self.exp.cp = input[0][3]
-        self.exp.ville = input[0][4]
-        self.exp.tel = input[0][5]
-        self.exp.mail = input[0][6]
+        self.expediteur.nom = self.ids.e_nom.text
+        self.expediteur.prenom = self.ids.e_prenom.text
+        self.expediteur.adresse = self.ids.e_adresse.text
+        self.expediteur.cp = self.ids.e_cp.text
+        self.expediteur.ville = self.ids.e_ville.text
+        self.expediteur.tel = self.ids.e_tel.text
+        self.expediteur.mail = self.ids.e_mail.text
         # Mise à jour du destinataire
-        self.dest.nom = input[1][0]
-        self.dest.prenom = input[1][1]
-        self.dest.adresse = input[1][2]
-        self.dest.cp = input[1][3]
-        self.dest.ville = input[1][4]
+        self.destinataire.nom = self.ids.d_nom.text
+        self.destinataire.prenom = self.ids.d_prenom.text
+        self.destinataire.adresse = self.ids.d_adresse.text
+        self.destinataire.cp = self.ids.d_cp.text
+        self.destinataire.ville = self.ids.d_ville.text
         # Mise à jour du Message
-        self.obj = input[2][1]
-        self.msg = input[2][0]
+        self.obj = self.ids.m_obj.text
+        self.msg = self.ids.msg.text
         
         
-    def create_letter(self,input):
-        self.associate(input)
-        is_okay = self.letter.save_letter(self.exp,self.dest,self.obj,self.msg)
+    def create_letter(self):
+        self.associate()
+        is_okay = self.letter.save_letter(self.expediteur,self.destinataire,self.obj,self.msg)
         if is_okay:
             self.show_dialog("Lettre créée avec succès")
         else:
             self.show_dialog("Erreur lors de la création de la lettre",True)
            
-    def create_json(self,input):
-        self.associate(input,True)
-        exp_json = {'nom':self.exp.nom,
-                    'prenom':self.exp.prenom,
-                    'adresse':self.exp.adresse,
-                    'cp':self.exp.cp,
-                    'ville':self.exp.ville,
-                    'tel':self.exp.tel,
-                    'mail':self.exp.mail
-                    }
+    def create_json(self):
+        self.associate()
+        exp_json = {'expediteur':{'nom':self.expediteur.nom,
+                    'prenom':self.expediteur.prenom,
+                    'adresse':self.expediteur.adresse,
+                    'cp':self.expediteur.cp,
+                    'ville':self.expediteur.ville,
+                    'tel':self.expediteur.tel,
+                    'mail':self.expediteur.mail
+                    }}
         try:
-            f= open("data.json","w")
+            f= open("data/settings.json","w")
             json.dump(exp_json,f)
             self.show_dialog("Le JSON a été créé")
             f.close()
@@ -124,5 +134,8 @@ class LetterGenerator(App):
     def build(self):
         self.manager = MainMenu()
         return self.manager
+    
+    def on_stop(self):
+        self.manager.create_json()
     
 LetterGenerator().run()
