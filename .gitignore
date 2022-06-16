@@ -2,3 +2,7 @@
 *.json
 .venv
 .vscode
+dist
+build
+touchtracer.spec
+.vscode/PythonImportHelper-v2-Completion.json
