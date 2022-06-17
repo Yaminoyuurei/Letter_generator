@@ -1,3 +1,11 @@
 {
-    "materialkv.pythonFile": "main.py"
+    "materialkv.pythonFile": "main.py",
+    "python.testing.pytestArgs": [
+        "test"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "cSpell.words": [
+        "expediteur"
+    ]
 }

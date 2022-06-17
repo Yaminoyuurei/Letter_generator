@@ -1,12 +1,12 @@
 import datetime
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-
-from module.Person import Person
 from docx.shared import Cm
 
-
 class Letter:
+    
+    def __init__(self,root):
+        self.root = root
 
     def save_letter(self, expediteur, destinataire, obj, msg):
         document = Document()
@@ -41,7 +41,10 @@ class Letter:
         p_signature.paragraph_format.left_indent = Cm(9)
         try:
             name = f"{datetime.datetime.now().strftime('%Y%m%d')}-{destinataire.nom}{destinataire.prenom}"
-            document.save(f"{name}.docx")
+            extension = "docx"
+            save_path = self.root.file_manager("save",name, extension)
+            if not save_path == "":
+                document.save(save_path)
             return True
         except:
             return False

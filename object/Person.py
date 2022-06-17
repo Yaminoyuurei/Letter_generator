@@ -1,5 +1,3 @@
-from kivy.properties import NumericProperty, Clock, ObjectProperty, StringProperty
-
 class Person:
     
     def __init__(self,nom="",prenom="",adresse="",cp="",ville="",tel = "", mail = ""):
