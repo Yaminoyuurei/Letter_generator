@@ -24,7 +24,7 @@ class Letter:
         # p_destinataire.paragraph_format.space_before = Cm(11)
 
         p_lieu = document.add_paragraph(
-            f"{expediteur.ville.upper()},\nle {datetime.datetime.now().strftime('%d/%m/%Y')}")
+            f"{expediteur.ville.upper()},\nle {self.check_date()} ")
         p_lieu.paragraph_format.left_indent = Cm(9)
 
         if obj != "":
@@ -58,5 +58,39 @@ class Letter:
             if person.mail == "":
                 return text
             else :
-                return text+f"\nMail : {person.mail}"        
+                return text+f"\nMail : {person.mail}"   
+            
+    def check_date(self):
+        day = datetime.datetime.now().strftime('%d')
+        year = datetime.datetime.now().strftime('%Y')
+        month_int = int(datetime.datetime.now().strftime('%m'))
+        month = ""
+        match month_int:
+            case 1:
+                month = " Janvier "
+            case 2:
+                month = " Février "
+            case 3:
+                month = " Mars "
+            case 4:
+                month = " Avril "
+            case 5:
+                month = " Mai "
+            case 6:
+                month = " Juin "
+            case 7:
+                month = " Juillet "
+            case 8:
+                month = " Août "
+            case 9:
+                month = " Septembre "
+            case 10:
+                month = " Octobre "
+            case 11:
+                month = " Novembre "
+            case 12:
+                month = " Décembre "
+        date = f"{day}{month}{year}"
+        return date
+        
 

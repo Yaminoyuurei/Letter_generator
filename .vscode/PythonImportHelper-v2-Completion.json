@@ -1,5 +1,23 @@
 [
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -15,6 +33,86 @@
         "importPath": "os.path",
         "description": "os.path",
         "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanVar",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ttk",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
         "documentation": {}
     },
     {
@@ -75,86 +173,6 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "messagebox",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "ttk",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "messagebox",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
-        "label": "filedialog",
-        "importPath": "tkinter",
-        "description": "tkinter",
-        "isExtraImport": true,
-        "detail": "tkinter",
-        "documentation": {}
-    },
-    {
         "label": "UI.menu_bar",
         "kind": 6,
         "isExtraImport": true,
@@ -196,6 +214,14 @@
         "documentation": {}
     },
     {
+        "label": "color",
+        "importPath": "turtle",
+        "description": "turtle",
+        "isExtraImport": true,
+        "detail": "turtle",
+        "documentation": {}
+    },
+    {
         "label": "UI.tab",
         "kind": 6,
         "isExtraImport": true,
@@ -222,11 +248,47 @@
         "documentation": {}
     },
     {
+        "label": "importlib_load_entry_point",
+        "kind": 2,
+        "importPath": ".venv.Scripts.futurize-script",
+        "description": ".venv.Scripts.futurize-script",
+        "peekOfCode": "def importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')\n    matches = (\n        entry_point\n        for entry_point in distribution(dist_name).entry_points\n        if entry_point.group == group and entry_point.name == name\n    )\n    return next(matches).load()\nglobals().setdefault('load_entry_point', importlib_load_entry_point)\nif __name__ == '__main__':",
+        "detail": ".venv.Scripts.futurize-script",
+        "documentation": {}
+    },
+    {
+        "label": "__requires__",
+        "kind": 5,
+        "importPath": ".venv.Scripts.futurize-script",
+        "description": ".venv.Scripts.futurize-script",
+        "peekOfCode": "__requires__ = 'future==0.18.2'\ntry:\n    from importlib.metadata import distribution\nexcept ImportError:\n    try:\n        from importlib_metadata import distribution\n    except ImportError:\n        from pkg_resources import load_entry_point\ndef importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')",
+        "detail": ".venv.Scripts.futurize-script",
+        "documentation": {}
+    },
+    {
+        "label": "importlib_load_entry_point",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pasteurize-script",
+        "description": ".venv.Scripts.pasteurize-script",
+        "peekOfCode": "def importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')\n    matches = (\n        entry_point\n        for entry_point in distribution(dist_name).entry_points\n        if entry_point.group == group and entry_point.name == name\n    )\n    return next(matches).load()\nglobals().setdefault('load_entry_point', importlib_load_entry_point)\nif __name__ == '__main__':",
+        "detail": ".venv.Scripts.pasteurize-script",
+        "documentation": {}
+    },
+    {
+        "label": "__requires__",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pasteurize-script",
+        "description": ".venv.Scripts.pasteurize-script",
+        "peekOfCode": "__requires__ = 'future==0.18.2'\ntry:\n    from importlib.metadata import distribution\nexcept ImportError:\n    try:\n        from importlib_metadata import distribution\n    except ImportError:\n        from pkg_resources import load_entry_point\ndef importlib_load_entry_point(spec, group, name):\n    dist_name, _, _ = spec.partition('==')",
+        "detail": ".venv.Scripts.pasteurize-script",
+        "documentation": {}
+    },
+    {
         "label": "JSON_manager",
         "kind": 6,
         "importPath": "object.Json_Manager",
         "description": "object.Json_Manager",
-        "peekOfCode": "class JSON_manager():\n    def __init__(self,root) :\n        self.root = root\n    def create_json(self):\n        self.root.associate()\n        exp_json = {'expediteur': {'nom': self.root.expediteur.nom,\n                    'prenom': self.root.expediteur.prenom,\n                                   'adresse': self.root.expediteur.adresse,\n                                   'cp': self.root.expediteur.cp,\n                                   'ville': self.root.expediteur.ville,",
+        "peekOfCode": "class JSON_manager():\n    def __init__(self,root) :\n        self.root = root\n    def create_json(self):\n        self.root.associate()\n        if self.root.s_active.get():\n            exp_json = {'nom': self.root.expediteur.nom,\n                        'prenom': self.root.expediteur.prenom,\n                        'adresse': self.root.expediteur.adresse,\n                        'cp': self.root.expediteur.cp,",
         "detail": "object.Json_Manager",
         "documentation": {}
     },
@@ -253,7 +315,7 @@
         "kind": 2,
         "importPath": "UI.menu_bar",
         "description": "UI.menu_bar",
-        "peekOfCode": "def create(self):\n        menu_bar = Menu(self)\n        menu_file = Menu(menu_bar, tearoff=0)\n        menu_file.add_command(label=\"Nouveau\", command=self.do_something)\n        menu_file.add_command(label=\"Ouvrir\", command=self.do_something)\n        menu_file.add_separator()\n        menu_file.add_command(label=\"Enregistrer sous...\", command=self.create_letter)\n        menu_import = Menu(menu_file, tearoff=0)\n        menu_import.add_command(label=\"Base Excel\", command=self.do_something)\n        menu_file.add_cascade(label=\"Importer\", menu=menu_import)",
+        "peekOfCode": "def create(self):\n        menu_bar = Menu(self,font=(\"Arial\", 12), bg=self.bg_color, fg=self.fg_color)\n        menu_file = Menu(menu_bar, tearoff=0,font=(\"Arial\", 12), bg=self.bg_color, fg=self.fg_color)\n        menu_file.add_command(label=\"Nouveau\", command=self.do_something, state=DISABLED)\n        menu_file.add_separator()\n        menu_file.add_command(label=\"Enregistrer sous...\", command=self.create_letter)\n        menu_import = Menu(menu_file, tearoff=0,font=(\"Arial\", 12), bg=self.bg_color, fg=self.fg_color)\n        menu_import.add_command(label=\"Base Excel\", command=self.do_something)\n        menu_file.add_cascade(label=\"Importer\", menu=menu_import, state=DISABLED)\n        menu_file.add_separator()",
         "detail": "UI.menu_bar",
         "documentation": {}
     },
@@ -262,7 +324,7 @@
         "kind": 2,
         "importPath": "UI.tab",
         "description": "UI.tab",
-        "peekOfCode": "def create(self):\n        tabsystem = ttk.Notebook(self, width=300)\n        # Create new tabs using Frame widget\n        tab1 = Frame(tabsystem)\n        tab2 = Frame(tabsystem)\n        tab3 = Frame(tabsystem)\n        tabsystem.add(tab1, text='Expéditeur')\n        tabsystem.add(tab2, text='Destinataires')\n        tabsystem.add(tab3, text='Références')\n        tabsystem.pack(side=LEFT, fill=Y)",
+        "peekOfCode": "def create(self):\n        s=ttk.Style()\n        tabsystem = ttk.Notebook(self, width=300)\n        s.configure('.', font=('Arial', 12))\n        # Create new tabs using Frame widget\n        tab1 = Frame(tabsystem, bg=self.bg_color)\n        tab2 = Frame(tabsystem, bg=self.bg_color)\n        tab3 = Frame(tabsystem, bg=self.bg_color)\n        tabsystem.add(tab1, text='Expéditeur')\n        tabsystem.add(tab2, text='Destinataires')",
         "detail": "UI.tab",
         "documentation": {}
     },
@@ -271,7 +333,7 @@
         "kind": 2,
         "importPath": "UI.toolbar",
         "description": "UI.toolbar",
-        "peekOfCode": "def create(self):\n        toolbar = Frame(self)\n        newButton = Button(toolbar, text=\"Nouveau\", command=self.do_something)\n        newButton.pack(side=LEFT, padx=2, pady=2)\n        saveButton = Button(toolbar, text=\"Générer\",\n                            command=self.create_letter)\n        saveButton.pack(side=LEFT, padx=2, pady=2)\n        settingsButton = Button(toolbar, text=\"Settings\",\n                                command=self.do_something)\n        settingsButton.pack(side=RIGHT, padx=2, pady=2)",
+        "peekOfCode": "def create(self):\n        toolbar = Frame(self, bg=self.bg_color)\n        newButton = Button(toolbar, text=\"Nouveau\",font=(\"Arial\",12), command=self.do_something, fg=self.fg_color, bg=self.bg_color_text)\n        newButton.pack(side=LEFT, padx=2, pady=2)\n        saveButton = Button(toolbar, text=\"Générer\",font=(\"Arial\",12),\n                            command=self.create_letter, fg=self.fg_color, bg=self.bg_color_text)\n        saveButton.pack(side=LEFT, padx=2, pady=2)\n        toolbar.pack(side=TOP, fill=X)",
         "detail": "UI.toolbar",
         "documentation": {}
     },
@@ -289,7 +351,7 @@
         "kind": 6,
         "importPath": "MainWindow",
         "description": "MainWindow",
-        "peekOfCode": "class MainWindow(Tk):\n    def __init__(self):\n        Tk.__init__(self)\n        self.json_manager = JSON_manager(self)\n        self.json_manager.load_json()\n        toolbar.create(self)\n        tab.create(self)\n        self.create_body()\n    def create_body(self):\n        body = Frame(self)",
+        "peekOfCode": "class MainWindow(Tk):\n    def __init__(self):\n        Tk.__init__(self)\n        self.bg_color_text = \"#1e1e1e\"\n        self.bg_color = \"#333333\"\n        self.fg_color = \"#ffffff\"\n        self.json_manager = JSON_manager(self)\n        self.json_manager.load_json()\n        menu_bar.create(self)\n        toolbar.create(self)",
         "detail": "MainWindow",
         "documentation": {}
     }
